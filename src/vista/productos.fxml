@@ -1,18 +1,299 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="731.0" prefWidth="952.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="controler.ProductosController">
+<AnchorPane id="AnchorPane" prefHeight="784.0" prefWidth="952.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.ProductosController">
    <children>
-      <Pane prefHeight="104.0" prefWidth="952.0">
+      <Pane prefHeight="104.0" prefWidth="952.0" style="-fx-background-color: LIGHTGREY;">
          <children>
-            <TextField layoutX="363.0" layoutY="52.0" />
-            <Label layoutX="60.0" layoutY="28.0" text="FARMA" />
+            <TextField layoutX="302.0" layoutY="40.0" prefHeight="25.0" prefWidth="243.0" />
+            <Label layoutX="30.0" layoutY="30.0" text="Farma Store">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="36.0" />
+               </font></Label>
+            <Button layoutX="560.0" layoutY="39.0" mnemonicParsing="false" style="-fx-background-color: LIGHTGREY;" />
+            <Button layoutX="695.0" layoutY="40.0" mnemonicParsing="false" style="-fx-background-color: LIGHTGREY;" text="Cerrar Sesión" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/images/loginnn.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="866.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: LIGHTGREY;">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/images/carrito.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="39.0" fitWidth="42.0" layoutX="544.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/images/lupa.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
+      <VBox layoutX="14.0" layoutY="112.0" prefHeight="195.0" prefWidth="205.0">
+         <children>
+            <ImageView fitHeight="124.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/images/acetaminofen.png" />
+               </image>
+            </ImageView>
+            <Label prefWidth="176.0" text="Acetaminofén 500 mg (genfar) x 100 TAB" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true" />
+            <Label text="19.900" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Button alignment="TOP_CENTER" mnemonicParsing="false" style="-fx-background-color: GOLD;" text="Agregar">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/images/carrito.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="261.0" layoutY="102.0" prefHeight="195.0" prefWidth="185.0">
+         <children>
+            <ImageView fitHeight="144.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/images/losartan.png" />
+               </image>
+            </ImageView>
+            <Label text="Losartán 50mg (genfar) x 30Tab" wrapText="true" />
+            <Label text="21.000">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" style="-fx-background-color: gold;" text="Agregar">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/images/carrito.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children></VBox>
+      <VBox layoutX="501.0" layoutY="102.0" prefHeight="176.0" prefWidth="131.0">
+         <children>
+            <ImageView fitHeight="145.0" fitWidth="245.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/dolex-tab-200-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Dolex (gsk) x10Tab" textAlignment="CENTER" />
+                  <Label text="21.500">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" style="-fx-background-color: GOLD;" text="Agregar">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Downloads/images/carrito.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children></VBox>
+      <VBox layoutX="730.0" layoutY="104.0" prefHeight="210.0" prefWidth="199.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/images/lumbal.png" />
+               </image>
+            </ImageView>
+            <Label text="Lumbal (Abbott) x36 Tab" />
+            <Label text="29.000">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <Button mnemonicParsing="false" style="-fx-background-color: GOLD;" text="Agregar">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/images/carrito.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children></VBox>
+      <VBox layoutX="29.0" layoutY="312.0" prefHeight="216.0" prefWidth="152.0">
+         <children>
+            <ImageView fitHeight="155.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/images/ceterizina.png" />
+               </image>
+            </ImageView>
+            <Label text="Ceterizinba 10 mg (genfar) x10tab" textAlignment="CENTER" wrapText="true" />
+            <Label text="17.000">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <Button mnemonicParsing="false" style="-fx-background-color: GOLD;" text="Agregar">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/images/carrito.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </VBox>
+      <VBox layoutX="19.0" layoutY="537.0" prefHeight="216.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/images/metronidazol.png" />
+               </image>
+            </ImageView>
+            <Label text="Metronidazol 500mg (genfar) x100Tab" textAlignment="CENTER" wrapText="true" />
+            <Label text="30.000">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <Button mnemonicParsing="false" style="-fx-background-color: GOLD;" text="Agregar">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/images/carrito.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </VBox>
+      <VBox layoutX="259.0" layoutY="331.0" prefHeight="196.0" prefWidth="108.0">
+         <children>
+            <ImageView fitHeight="117.0" fitWidth="141.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/images/paracetamol.png" />
+               </image>
+            </ImageView>
+            <Label text="Paracetamol 500mg (Bayern) x30Tab" textAlignment="CENTER" wrapText="true" />
+            <Label text="15.900" />
+            <Button mnemonicParsing="false" style="-fx-background-color: gold;" text="Agregar">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/images/carrito.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="719.0" layoutY="310.0" prefHeight="224.0" prefWidth="152.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/loratarina-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Label text="Loratadina 100mg (genfar) x10Tab " textAlignment="CENTER" wrapText="true" />
+            <Label text="18.400">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <Button mnemonicParsing="false" style="-fx-background-color: GOLD;" text="Agregar">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/images/carrito.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </VBox>
+      <VBox layoutX="246.0" layoutY="531.0" prefHeight="225.0" prefWidth="162.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/vita_c-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Label text="Vitamina C 500mg (Mk) x100Tab" textAlignment="CENTER" wrapText="true" />
+            <Label text="27.000">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <Button mnemonicParsing="false" style="-fx-background-color: GOLD;" text="Agregar">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/images/carrito.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </VBox>
+      <VBox layoutX="505.0" layoutY="545.0" prefHeight="218.0" prefWidth="175.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/vita_e-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Label text="Vitamina E (Naturlight) x60Tab" wrapText="true" />
+            <Label text="24.000">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <Button mnemonicParsing="false" style="-fx-background-color: GOLD;" text="Agregar">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/images/carrito.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </VBox>
+      <VBox layoutX="495.0" layoutY="341.0" prefHeight="210.0" prefWidth="158.0">
+         <children>
+            <ImageView fitHeight="124.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/images/ibuprofeno.png" />
+               </image>
+            </ImageView>
+            <Label text="Ibuprofeno 800mg (genfar) x50Tab " wrapText="true" />
+            <Label text="16.000">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <Button mnemonicParsing="false" style="-fx-background-color: GOLD;" text="Agregar">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/images/carrito.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
