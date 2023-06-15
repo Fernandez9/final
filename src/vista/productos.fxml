@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="784.0" prefWidth="952.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.ProductosController">
+<AnchorPane id="AnchorPane" prefHeight="784.0" prefWidth="952.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.ProductosController">
    <children>
       <Pane prefHeight="104.0" prefWidth="952.0" style="-fx-background-color: LIGHTGREY;">
          <children>
@@ -59,7 +59,7 @@
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Label>
-            <Button alignment="TOP_CENTER" mnemonicParsing="false" style="-fx-background-color: GOLD;" text="Agregar">
+            <Button fx:id="button1" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#agregarCarrito" style="-fx-background-color: GOLD;" text="Agregar">
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -86,7 +86,7 @@
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" style="-fx-background-color: gold;" text="Agregar">
+            <Button mnemonicParsing="false" onAction="#agregarCarrito" style="-fx-background-color: gold;" text="Agregar">
                <graphic>
                   <ImageView fitHeight="31.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -111,7 +111,7 @@
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" style="-fx-background-color: GOLD;" text="Agregar">
+                  <Button mnemonicParsing="false" onAction="#agregarCarrito" style="-fx-background-color: GOLD;" text="Agregar">
                      <graphic>
                         <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                            <image>
