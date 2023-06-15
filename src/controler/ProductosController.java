@@ -16,6 +16,8 @@ public class ProductosController implements Initializable {
     @FXML
     private void agregarCarrito(){
     
+        
+        
 }
     
     

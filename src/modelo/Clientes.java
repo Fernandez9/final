@@ -10,6 +10,7 @@ public class Clientes {
     private String direccion;
 
     private String MePago;
+    Clientes sig;
 
     public Clientes() {
     }
@@ -22,6 +23,7 @@ public class Clientes {
         this.cel = cel;
         this.direccion = direccion;
         this.MePago = MePago;
+        sig=null;
     }
 
     public int getId() {
