@@ -50,7 +50,7 @@
          <children>
             <ImageView fitHeight="124.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Downloads/images/acetaminofen.png" />
+                  <Image url="@../images/acetaminofen.png" />
                </image>
             </ImageView>
             <Label prefWidth="176.0" text="Acetaminofén 500 mg (genfar) x 100 TAB" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true" />
@@ -70,8 +70,14 @@
                      </cursor>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
             </Button>
          </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
       </VBox>
       <VBox layoutX="261.0" layoutY="102.0" prefHeight="195.0" prefWidth="185.0">
          <children>
@@ -94,6 +100,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
             </Button>
          </children></VBox>
       <VBox layoutX="501.0" layoutY="102.0" prefHeight="176.0" prefWidth="131.0">
