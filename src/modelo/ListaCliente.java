@@ -6,19 +6,19 @@ import javax.swing.JOptionPane;
 
 public class ListaCliente {
 
-    Clientes tope;
+    Clientes cab;
 
     public ListaCliente() {
-        tope = null;
+        cab = null;
     }
 
     //dentro del boton login, validamos, si es true, cambia de ventana 
     //y oculta la de login, si es false, se mantiene la ventana
-    Clientes login(String corre, String contras) {
+    public Clientes login(String corre, String contras) {
 
-        Clientes p = tope;
-        do {
+        Clientes p = cab;
 
+        while (p != null) {
             if (p.getCorreo().equals(corre) && p.getContra().equals(contras)) {
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -38,7 +38,7 @@ public class ListaCliente {
 
             }
             p = p.sig;
-        } while (p != tope);
+        } 
 
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setHeaderText(null);
@@ -48,55 +48,56 @@ public class ListaCliente {
 
         return null;
     }
+    
+    
+    public Clientes buscarCorreo(String emai) {
 
-    public Clientes buscarId(int registro) {
-
-        if (tope == null) {
+        if (cab == null) {
             return null;
         } else {
 
-            Clientes p = tope;
+            Clientes p = cab;
 
             do {
 
-                if (p.getId() == registro) {
+                if (p.getCorreo().equals(emai)) {
                     return p;
                 } else {
                     p = p.sig;
                 }
 
-            } while (p != tope);
+            } while (p != cab);
 
         }
 
         return null;
     }
 
-    public Clientes CrearNodo(TextField cod, TextField name, TextField email, TextField password,
-            TextField cellph, TextField localiza, TextField pago) {
+    public Clientes CrearNodo( TextField name, TextField email, TextField password,
+            TextField cellph) {
 
         Clientes buscar = null;
 
         try {
-            buscar = buscarId(Integer.parseInt(cod.getText()));
+            buscar = buscarCorreo(email.getText());
 
+            
             if (buscar != null) {
 
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("Error");
-                alert.setContentText("Error: Este ´n° de identificación´ "
-                        + "ya se encuentra registrado.  Reemplazarlo!");
+                alert.setContentText("Error: Este ´correo´ "
+                        + "ya se encuentra en uso.  Reemplazarlo!");
                 alert.showAndWait();
 
-                cod.setText("");
-                cod.requestFocus();
+                email.setText("");
+                email.requestFocus();
                 return null;
             } else {
 
-                Clientes info = new Clientes(Integer.parseInt(cod.getText()), name.getText(),
-                        email.getText(), password.getText(), Integer.parseInt(cellph.getText()),
-                        localiza.getText(), pago.getText());
+                Clientes info = new Clientes(name.getText(),email.getText(), 
+                        password.getText(), Integer.parseInt(cellph.getText()));
                 return info;
             }
 
@@ -106,40 +107,57 @@ public class ListaCliente {
         }
 
     }
+    
+    public Clientes getUltimo(){
+        if(cab==null)
+            return null;
+        else{
+            Clientes p = cab;
+            while (p.sig != null) {
+                p = p.sig;
+            }
+            return p;
+        }
+    }
 
-    void registrar(TextField cod, TextField name, TextField email, TextField password,
-            TextField cellph, TextField localiza, TextField pago) {
+    public void registrar(TextField name, TextField email, TextField password,
+            TextField cellph) {
 
-        Clientes info = CrearNodo(cod, name, email, password, cellph, localiza, pago);
+        Clientes info = CrearNodo(name, email, password, cellph);
 
         if (info != null) {
-            if (tope == null) {
-                tope = info;
-                JOptionPane.showMessageDialog(null,
-                        "Se ha registrado un nuevo elemento "
-                        + "a la lista.  La lista estaba vacía.");
+            if (cab == null) {
+                cab = info;
+                
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setTitle("Exitosamente");
+                alert.setContentText("Cuenta creada exitosamente");
+                alert.showAndWait();
+                
             } else {
-                //Enlazamos el nuevo nodo a la lista
-                info.sig = tope;
-                //Ahora se debe mover cab al primer 
-                //nuevo elemento
-                tope = info;
-                JOptionPane.showMessageDialog(null,
-                        "Se ha registrado un nuevo elemento al "
-                        + "inicio de la lista.");
+               Clientes ultimo=getUltimo();
+                ultimo.sig = info;
+                info.ant = ultimo;
+                
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setTitle("Exitosamente");
+                alert.setContentText("Cuenta creada exitosamente");
+                alert.showAndWait();;
             }
         } else {
         }
 
     }
 
-    void registraCompra() {
+   public void registraCompra() {
 
     }
     
-    Clientes crearNodoCompra(){
+   // Clientes crearNodoCompra(){
         
-    }
+   // }
     
     
 

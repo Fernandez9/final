@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="197.0" prefWidth="273.0" style="-fx-background-color: LIGHTCYAN;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="vista.VentanaPagosController">
+   <children>
+      <Pane layoutX="25.0" layoutY="23.0" prefHeight="153.0" prefWidth="222.0" style="-fx-background-color: MEDIUMAQUAMARINE;">
+         <children>
+            <Label layoutY="11.0" text="Total a Pagar">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="56.0" text="Seleccione el método de compra">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="80.0" layoutY="85.0" mnemonicParsing="false" style="-fx-background-color: DARKSLATEGREY;" text="Efectivo" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="83.0" layoutY="119.0" mnemonicParsing="false" style="-fx-background-color: DARKSLATEGREY;" text="Tarjeta" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="12.0" />
+               </font>
+            </Button>
+            <TextField editable="false" layoutX="85.0" layoutY="7.0" prefHeight="25.0" prefWidth="125.0" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="40.0" fitWidth="56.0" layoutX="1.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/letras%20farma.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

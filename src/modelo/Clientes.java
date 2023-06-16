@@ -9,29 +9,24 @@ public class Clientes {
     private int cel;
     
     Clientes sig;
+    Clientes ant;
 
     public Clientes() {
             
     }
 
-    public Clientes(int id, String nombre, String correo, String contra, int cel, String direccion, String MePago) {
-        this.id = id;
+    public Clientes( String nombre, String correo, String contra, int cel) {
+       
         this.nombre = nombre;
         this.correo = correo;
         this.contra = contra;
         this.cel = cel;
-        this.direccion = direccion;
-        this.MePago = MePago;
+        
         sig=null;
+        ant=null;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    
 
     public String getNombre() {
         return nombre;
@@ -65,21 +60,9 @@ public class Clientes {
         this.cel = cel;
     }
 
-    public String getDireccion() {
-        return direccion;
-    }
+ 
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public String getMePago() {
-        return MePago;
-    }
-
-    public void setMePago(String MePago) {
-        this.MePago = MePago;
-    }
+   
     
     
 
