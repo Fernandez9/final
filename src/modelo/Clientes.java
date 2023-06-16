@@ -2,17 +2,16 @@ package modelo;
 
 public class Clientes {
 
-    private int id;
+  
     private String nombre;
     private String correo;
     private String contra;
     private int cel;
-    private String direccion;
-
-    private String MePago;
+    
     Clientes sig;
 
     public Clientes() {
+            
     }
 
     public Clientes(int id, String nombre, String correo, String contra, int cel, String direccion, String MePago) {
